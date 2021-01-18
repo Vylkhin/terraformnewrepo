@@ -19,7 +19,7 @@ pipeline {
     stages {
 	stage('Init Terraform directory'){
 		steps{
-			sh 'terraform init'
+			sh 'terraform init -backend-config=backend.tfvars'
 		}
 	}
 
